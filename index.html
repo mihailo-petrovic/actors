@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pretraga glumaca</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="moreInfo" class="moreInfo"></div>
+    <h1 id="title">Pretraga glumaca sa TMDb-a</h1>
+    <input
+      type="search"
+      name="searchInput"
+      id="searchInput"
+      placeholder="Pretraži glumce"
+    />
+    <input id="searchBtn" type="button" value="Pretraži" />
+    <input type="number" min="1" value="1" name="pageNumber" id="pageNumber" />
+    <span id="totalPages"></span>
+    <div id="container"></div>
+    <script src="js.js"></script>
+  </body>
+</html>
