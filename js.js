@@ -12,9 +12,6 @@ searchInput.addEventListener("keyup", () => {
   pageNumberInput.value = 1;
 });
 searchBtn.addEventListener("click", callApi);
-pageNumberInput.addEventListener("keypress", (e) => {
-  e.preventDefault();
-});
 pageNumberInput.addEventListener("change", callApi);
 
 function testKey(e) {
@@ -37,9 +34,10 @@ function callApi(e) {
     "&include_adult=false";
   fetch(url)
     .then((res) => res.json())
-    .then(data => {
-        showResults(data);
-    }).catch(console.error);
+    .then((data) => {
+      showResults(data);
+    })
+    .catch(console.error);
 }
 
 function showResults(obj) {
@@ -96,9 +94,9 @@ function showResults(obj) {
 
       xDiv.appendChild(xImg);
       xDiv.appendChild(xDivOpis);
-      xDivOpis.appendChild(xBtn);
       xDivOpis.appendChild(xIme);
       xDivOpis.appendChild(xMovies);
+      xDivOpis.appendChild(xBtn);
     }
   }
 }

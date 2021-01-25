@@ -56,7 +56,7 @@ body {
     background-color: rgb(219, 219, 219);
     color: #3b2629;
     width: 90%;
-    height: 200px;
+    min-height: 200px;
     padding: 10px;
     border: 1.7px solid #6d454c;
     margin-top: 20px;
@@ -67,11 +67,15 @@ body {
     overflow-y: hidden;
   }
   .actor img {
+    align-self: center;
     height: 100%;
   }
   .actor .opis {
     text-align: left;
     padding-left: 20px;
+  }
+  .actor .opis p {
+    margin-bottom: 40px;
   }
   .actor .opis .readMore {
     font-family: "Raleway", sans-serif;
