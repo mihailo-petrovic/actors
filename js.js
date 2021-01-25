@@ -3,6 +3,7 @@ var ajaxUrl = "https://api.themoviedb.org/3/search/person";
 var api_key = "4809e2c8d7aced296b24cc62c56871c4";
 var container = document.getElementById("container");
 var moreInfoDiv = document.getElementById("moreInfo");
+var wrapper = document.getElementById("wrapper");
 let searchBtn = document.getElementById("searchBtn");
 let searchInput = document.getElementById("searchInput");
 let pageNumberInput = document.getElementById("pageNumber");
@@ -102,7 +103,7 @@ function showResults(obj) {
 }
 
 function moreInfoMovies(x) {
-  document.body.style.overflow = "hidden";
+  wrapper.style.overflow = "hidden";
   moreInfoDiv.innerHTML = "";
   moreInfoDiv.scrollTop = 0;
   let moviePosters = document.createElement("div");
@@ -133,6 +134,6 @@ window.addEventListener("click", function (e) {
     !e.target.classList.contains("readMore")
   ) {
     moreInfoDiv.classList.remove("showInfo");
-    document.body.style.overflow = "scroll";
+    wrapper.style.overflow = "scroll";
   }
 });
