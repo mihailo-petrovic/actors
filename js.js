@@ -102,6 +102,7 @@ function showResults(obj) {
 }
 
 function moreInfoMovies(x) {
+  callClick();
   document.body.style.overflow = "hidden";
   moreInfoDiv.innerHTML = "";
   moreInfoDiv.scrollTop = 0;
@@ -127,12 +128,14 @@ function moreInfoMovies(x) {
   moreInfoDiv.appendChild(moviePosters);
 }
 
-window.addEventListener("click", function (e) {
-  if (
-    !moreInfoDiv.contains(e.target) &&
-    !e.target.classList.contains("readMore")
-  ) {
-    moreInfoDiv.classList.remove("showInfo");
-    document.body.style.overflow = "scroll";
-  }
-});
+function callClick() {
+  window.addEventListener("click", function (e) {
+    if (
+      !moreInfoDiv.contains(e.target) &&
+      !e.target.classList.contains("readMore")
+    ) {
+      moreInfoDiv.classList.remove("showInfo");
+      document.body.style.overflowY = "scroll";
+    }
+  });
+}
