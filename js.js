@@ -102,7 +102,9 @@ function showResults(obj) {
 }
 
 function moreInfoMovies(x) {
+  document.body.style.overflow = "hidden";
   moreInfoDiv.innerHTML = "";
+  moreInfoDiv.scrollTop = 0;
   let moviePosters = document.createElement("div");
   for (let m of x.known_for) {
     let mDiv = document.createElement("div");
@@ -131,5 +133,6 @@ window.addEventListener("click", function (e) {
     !e.target.classList.contains("readMore")
   ) {
     moreInfoDiv.classList.remove("showInfo");
+    document.body.style.overflow = "scroll";
   }
 });
